@@ -1,4 +1,6 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+// En producción las peticiones van a /api/* del mismo dominio (Next.js rewrite al backend)
+// En desarrollo se puede apuntar directamente al backend local
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
 interface ApiOptions {
   method?: string;
