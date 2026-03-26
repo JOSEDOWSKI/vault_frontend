@@ -1,6 +1,23 @@
-// En producción las peticiones van a /api/* del mismo dominio (Next.js rewrite al backend)
-// En desarrollo se puede apuntar directamente al backend local
-const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
+// Determina la URL base de la API según el dominio del frontend:
+// - vault.eirl.pe → llamada directa a apivault.eirl.pe (mismo dominio raíz, cookies OK)
+// - vault.idema.edu.pe → usa rewrites de Next.js (proxy, evita cookies cross-domain)
+// - localhost → usa NEXT_PUBLIC_API_URL o localhost:8000
+function getApiBaseUrl(): string {
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname;
+    if (host === 'vault.eirl.pe') {
+      return 'https://apivault.eirl.pe';
+    }
+    if (host === 'localhost' || host === '127.0.0.1') {
+      return process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+    }
+    // Cualquier otro dominio (vault.idema.edu.pe, etc.) → rewrites del mismo dominio
+    return '';
+  }
+  return process.env.NEXT_PUBLIC_API_URL || '';
+}
+
+const API_URL = getApiBaseUrl();
 
 interface ApiOptions {
   method?: string;
