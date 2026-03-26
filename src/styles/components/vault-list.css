@@ -1,0 +1,11 @@
+.vault-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: var(--space-md);
+}
+
+@media (max-width: 480px) {
+  .vault-list {
+    grid-template-columns: 1fr;
+  }
+}

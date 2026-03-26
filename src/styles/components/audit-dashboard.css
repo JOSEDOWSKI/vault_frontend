@@ -1,0 +1,142 @@
+.audit {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.audit__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.audit__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.audit__filter {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.audit__filter:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.audit__error {
+  color: var(--color-danger);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.audit__loading,
+.audit__empty {
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 0.95rem;
+}
+
+.audit__table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.audit__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.audit__table thead {
+  background: var(--color-surface-raised);
+}
+
+.audit__table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.audit__table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.audit__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.audit__table tbody tr:hover {
+  background: var(--color-surface-raised);
+}
+
+.audit__cell--date {
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.audit__cell--ip {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.audit__cell--id {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.audit__filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.audit__filter--date {
+  cursor: default;
+}
+
+.audit__clear-btn {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.audit__clear-btn:hover {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.audit__count {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+}
+

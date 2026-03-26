@@ -1,0 +1,223 @@
+.users-dashboard {
+  padding: 2rem;
+  max-width: 860px;
+}
+
+.users-dashboard__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.75rem;
+}
+
+.users-dashboard__section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.users-dashboard__section-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+/* Formulario de invitación */
+.users-dashboard__invite-fields {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.users-dashboard__input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  transition: border-color 0.15s;
+}
+
+.users-dashboard__input:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px var(--color-accent-subtle);
+}
+
+.users-dashboard__select {
+  padding: 0.5rem 0.75rem;
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* Link generado */
+.users-dashboard__link-box {
+  margin-top: 1.25rem;
+  background: var(--color-accent-subtle);
+  border: 1px solid var(--color-border-focus);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.users-dashboard__link-label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.users-dashboard__link-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.users-dashboard__link-code {
+  flex: 1;
+  font-size: 0.75rem;
+  word-break: break-all;
+  color: var(--color-text);
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+}
+
+.users-dashboard__dismiss {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.users-dashboard__dismiss:hover {
+  color: var(--color-text-secondary);
+}
+
+/* Tabla de invitaciones */
+.users-dashboard__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.users-dashboard__table th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.users-dashboard__table td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.users-dashboard__table tr:last-child td {
+  border-bottom: none;
+}
+
+.users-dashboard__date {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+/* Badges */
+.users-dashboard__badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.users-dashboard__badge--org_admin {
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+}
+
+.users-dashboard__badge--member {
+  background: var(--color-bg-elevated);
+  color: var(--color-text-secondary);
+}
+
+/* Botones */
+.users-dashboard__btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.15s;
+  white-space: nowrap;
+}
+
+.users-dashboard__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.users-dashboard__btn--primary {
+  background: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+.users-dashboard__btn--primary:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
+.users-dashboard__btn--copy {
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.users-dashboard__btn--copy:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.users-dashboard__btn--danger {
+  background: transparent;
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+  font-size: 0.8rem;
+  padding: 0.3rem 0.65rem;
+}
+
+.users-dashboard__btn--danger:hover {
+  background: var(--color-danger-subtle);
+}
+
+/* Estados */
+.users-dashboard__error {
+  color: var(--color-danger);
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+.users-dashboard__empty {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
